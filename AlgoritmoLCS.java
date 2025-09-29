@@ -1,9 +1,13 @@
 public class AlgoritmoLCS {
     public static void main(String[] args) {
-        String a = "ABCDBA";
+        String a = "ABCBDAB";
         String b = "BDCAB";
+        long inicio = System.nanoTime();
         int res = lcs(a, b);
-        System.out.println(res);
+        long fim = System.nanoTime();
+        System.out.println("Maior subsequencia comum: " + res);
+        double tempoExecucao = (fim - inicio) / 1_000_000.0;
+        System.out.println("Executado em: " + tempoExecucao + "ms");
     }
 
     public static int lcs(String a, String b) {
