@@ -5,6 +5,8 @@ public class AlgoritmoLCS {
         long inicio = System.nanoTime();
         int res = lcs(a, b);
         long fim = System.nanoTime();
+        System.out.println("Sequencia A: " + a);
+        System.out.println("Sequencia B: " + b);
         System.out.println("Maior subsequencia comum: " + res);
         double tempoExecucao = (fim - inicio) / 1_000_000.0;
         System.out.println("Executado em: " + tempoExecucao + "ms");
